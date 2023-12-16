@@ -1,0 +1,12 @@
+footer{
+    width: calc(1em + 100%);
+    height: 9vh;
+    background-color: #124715;
+}
+footer p{
+    padding-top: 2em;
+    text-align: center;
+    justify-content: center;
+    font-size: calc(1em + .025vw);
+    color: #fff;
+}

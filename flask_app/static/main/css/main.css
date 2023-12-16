@@ -1,0 +1,369 @@
+main{
+    margin: auto;
+    padding: 0;
+
+    width: calc(1em + 80vw);
+    min-height: calc(1em + 75vh); 
+}
+
+
+
+/*
+// Feedback Form
+*/
+
+#feedback-toggle{
+    display: none;
+}
+#feedback-toggle:checked ~ #feedback-form{
+    display: block; /* Reveal form */
+}
+#feedback-button{
+    width: calc(1em + 5vw);
+    height: calc(1em + 2vh);
+    background-color: #124715;
+    border-radius: 5px;
+    outline: 1.5px solid #181818;
+    color: #fff;
+    text-align: center;
+
+    /* Place on the right */
+    top: 55%;
+    right: -4%;
+    position: fixed;
+    
+    /* Rotate Button */
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+}
+#feedback-button:hover{
+    background-color: #295a2b;
+    transition: 0.25s ease-in-out;
+    cursor: pointer;
+}
+#feedback-button p{
+    margin: .5rem auto;
+    font-size: calc(.1em + 1vw);
+}
+#feedback-form{
+    width: calc(1em + 20vw);
+    height: calc(1em + 45vh);
+    background-color: #181818;
+    color: #fff;
+    display: none; /* Hide form initially */
+
+    /* Place on top of main content */
+    position: fixed;
+    top: 25%;
+    right: 37.5%;
+    z-index: 3; /* Keep above piano keys */
+}
+.fbf-textbox{
+    width: calc(1em + 80%);
+    padding: 1.5em 1.5em;
+    margin: 1em auto;
+    box-sizing: border-box;
+    display: block;
+}
+#fb-name{
+    margin-top: 1.8em;
+}
+#fb-comment{
+    height: 13em;
+}
+#fb-submit{
+    width: calc(1em + 80%);
+    padding: 1.5em 0;
+    margin: 1em auto;
+    background-color: #124715;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+}
+#fb-submit:hover{ /* Change color of submit button on hover */
+    background-color: #295a2b;
+    transition: 0.2s ease-in-out;
+}
+/* Feedback Page */
+#feedback-page-text{
+    text-align: center;
+}
+#fb-reply-name{
+    font-weight: bold;
+}
+
+
+
+/*
+// Home Content
+*/
+
+/* Container for the content */
+#home-content{
+    /* formatting the container */
+    width: calc(1em + 80vw);
+    height: calc(1em + 50vh);
+    max-width: 80vw;
+    max-height: 50vh;
+    margin: calc(1em + 3.5vh) auto;
+
+    /* formatting the contents */
+    display: flex;
+    flex-direction: row;
+}
+#picture-h{ /* picture for home.html */
+    flex: 5;
+    outline: 3px solid #181818;
+    margin-right: calc(1em + .5vw);
+    background-image: url(/static/main/images/me.png);
+    background-size: cover;
+    background-position: center;
+}
+#text-h{
+    flex: 5;
+    overflow: scroll;
+}
+#text-h h1{
+    font-size: calc(1em + 2.5vh);
+}
+#text-h p{
+    font-size: calc(1em + .5vh);
+}
+#fun-fact{
+    width: calc(1em + 80vw);
+    max-width: 80vw;
+    margin: calc(1em + 3.5vh) auto;
+
+    font-size: calc(1em + 2vh);
+    text-align: center;
+    overflow: scroll;
+}
+#fun-fact-text{
+    font-weight: bold;
+}
+
+
+
+/*
+// Projects Content
+*/
+
+/* Container for the content */
+#project-content{
+    /* formatting the container */
+    width: calc(1em + 80vw);
+    height: calc(1em + 50vh);
+    max-width: 80vw;
+    max-height: 50vh;
+    margin: calc(1em + 3.5vh) auto;
+
+    /* formatting the contents */
+    display: flex;
+    flex-direction: row;
+}
+#project-img{ /* picture for projects.html */
+    flex: 5;
+    outline: 3px solid #181818;
+    margin-right: calc(1em + .5vw);
+    background-image: url(/static/main/images/piano.jpeg);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer; /* make cursor into pointer when hovering over piano picture */
+}
+#project-img2{
+    flex: 5;
+    outline: 3px solid #989595;
+    margin-right: calc(1em + .5vw);
+    background-image: url(/static/main/images/wordle.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer; /* make cursor into pointer when hovering over piano picture */
+}
+/* Project Page Text */
+#proj-page-text{
+    width: calc(1em + 80vw);
+    max-width: 80vw;
+    margin: calc(1em + 2vh) auto;
+}
+#proj-page-text h1{
+    font-size: calc(1em + 2.5vh);
+    text-align: center;
+    margin-top: 0;
+}
+#proj-page-text p{
+    font-size: calc(1em + .5vh);
+    text-align: center;
+    overflow: scroll;
+    margin-bottom: calc(1em + 1vh);
+}
+/* Text for Piano App Description */
+#project-description{
+    flex: 5;
+    overflow: scroll;
+}
+#project-description h1{
+    font-size: calc(1em + 2.5vh);
+    margin-top: calc(1em + 10vh);
+}
+#project-description p{
+    font-size: calc(1em + .5vh);
+}
+
+
+
+/*
+// Piano Content
+*/
+
+#piano-page-text{
+    font-style: italic;
+}
+#we-see-you{
+    font-weight: bold;
+}
+
+
+
+/*
+// Resume Content 
+*/
+
+.institution-data{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.left-col{
+    display: flex;
+    flex-direction: column;
+}
+.right-col{
+    display: flex;
+    flex-direction: column;
+}
+.left-col p{
+    margin-top: 0.3125em;
+    margin-bottom: 0;
+}
+#inst-name{
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+#inst-dept{
+    text-align: right;
+    font-style: italic;
+    font-size: 0.8125em;
+    margin-bottom: 0;
+}
+.position-data{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#pos-title{
+    text-align: left;
+    font-size: calc(1em + 0.3750em);
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#pos-sd-ed{
+    text-align: right;
+}
+.experience-data{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#exp-name{
+    margin-bottom: 0;
+}
+#exp-link{
+    color: inherit;
+}
+#exp-sd-ed{
+    text-align: right;
+    opacity: 55%;
+    margin: 0;
+}
+.skill-content{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#skill-name-lvl{
+    font-weight: normal;
+    opacity: 55%;
+    display: inline;
+    margin: 0.3125em;
+}
+
+
+
+/*
+// Responsive Section 
+*/
+
+@media screen and (max-width: 650px){
+    /* Home Page */
+    #home-content{
+        flex-direction: column;
+    }
+    #text-h h1{
+        text-align: center;
+    }
+    #text-h p{
+        text-align: center;
+    }
+
+    /* Project Page */
+    #project-content{
+        flex-direction: column;
+        margin-bottom: calc(1em + 5vh);
+    }
+    #project-description h1{
+        margin: calc(.5em + 1vh) 0;
+        text-align: center;
+    }
+    #project-description p{
+        overflow: scroll;
+        text-align: center;
+    }
+
+    /* Resume Page */
+    .left-col p{
+        font-size: 0.8750em;
+    }
+    #inst-name{
+        margin-top: 0.35em;
+    }
+    #inst-dept{
+        font-size: 0.6250em;
+    }
+    #pos-title{
+        font-size: 1.25em;
+    }
+    #pos-sd-ed{
+        font-size: 0.75em;
+    }
+    #exp-name{
+        font-size: 1em;
+    }
+    #exp-sd-ed{
+        font-size: .75em;
+    }
+    #skill-name-lvl{
+        font-size: 0.875em;
+    }
+
+    /* Feedback Page */
+    .fb-reply{
+        overflow-x: scroll;
+    }
+}

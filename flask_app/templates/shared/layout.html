@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Noah Wolff's personal page</title>
+    <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/header.css')  }}">
+    <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/navbar.css')  }}">
+    <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/main.css')    }}">
+    <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/footer.css')  }}">
+    <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/piano.css')   }}">
+    <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/login.css')   }}">
+    <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/chat.css')    }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='main/images/logo.png') }}">
+    {% block extracss %}{% endblock %}
+  </head>
+
+  <body>
+    <article>
+    <!-- The header  -->
+    <header>
+      <div class="banner"></div>
+    </header>
+
+    <!-- The navigation bar -->
+    <nav>
+      <div id="homework-welcome-text">
+        {% if user == 'Unknown' %}  
+          <p>CSE 477 - Final</p>
+        {% else %}
+          <p> <span id="welcome-text">Welcome</span> <span id="user-text">{{user}}</span></p>
+        {% endif %}
+        <br>
+      </div>
+
+      <!-- The responsive menu icon -->
+      <input type="checkbox" id="menu-toggle" title="Toggles drop down menu for mobile view">
+      <label id="mt-label" for="menu-toggle">
+        <img src="/static/main/images/menu-bar.png" alt="menu bar" loading="lazy">
+      </label>
+
+      <!-- The nav bar links -->
+      <ul id="nav-links">
+        <li><a class="nav-link" href="/home">    Home</a></li>
+        <li><a class="nav-link" href="/projects">Projects</a></li>
+        <li><a class="nav-link" href="/resume">  Resume</a></li>
+        <li><a class="nav-link" href="/chat">    Chat</a></li>
+        {% if user == 'Unknown' %} 
+          <li><a class="nav-link" href="/login"> Login</a></li>
+        {% else %}
+          <li><a class="nav-link" href="/logout">Logout</a></li>
+        {% endif %}
+        <li><a id="linkedin-text" class="nav-link" href="https://www.linkedin.com/in/noah-shaw-wolff/">
+            <img id="linkedin-img" src="static/main/images/social-linkedin.png" alt="LinkedIn" loading="lazy">LinkedIn</a></li>
+      </ul>
+    </nav>
+
+    <!-- The main content  -->
+    <main>
+      <!-- Feedback form -->
+      <input type="checkbox" id="feedback-toggle" title="Toggles feedback form visibility">
+      <label for="feedback-toggle">
+        <div id="feedback-button"><p>Feedback</p></div>
+      </label>
+      <form id="feedback-form" method="post" enctype="multipart/form-data" action="/processfeedback">
+        <input id="fb-name"    class="fbf-textbox" type="text" name="name"    placeholder="Your name..."     title="Name of commenter">
+        <input id="fb-email"   class="fbf-textbox" type="text" name="email"   placeholder="Your e-mail..."   title="E-mail of commenter">
+        <input id="fb-comment" class="fbf-textbox" type="text" name="comment" placeholder="Your feedback..." title="Commenter's feedback">
+        <input id="fb-submit"  type="submit"       value="Submit"             title="Submit button for feedback form">
+      </form>
+
+      <!-- All main content -->
+      {% block maincontent %}{% endblock %}
+    </main>
+
+    <!-- The footer of the file -->
+    <footer>
+      <p>Copyright © Noah, made with &lt;3 by me</p>
+    </footer>
+    </article>
+    
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='main/js/main.js')  }}" defer></script>
+    <script src="{{ url_for('static', filename='main/js/piano.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='main/js/login.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='main/js/chat.js')  }}" defer></script>
+    {% block extrajs %}{% endblock %}
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

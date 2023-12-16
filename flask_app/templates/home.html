@@ -1,0 +1,35 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+  <div id="home-content">
+    <div id="picture-h"></div>
+    <div id="text-h">
+        <h1>About Me</h1>
+        <p>
+          My name is Noah Wolff and I have been fascinated by computers and engineering for as long as I can remember. 
+          From breaking down and trying to fix my older sister's broken calculators to finally dipping my toes into coding
+          during my final years of high school, I have always wondered how things work and how I could make them work.
+          <br><br>
+
+          Now almost 5 years after my first ever "Hello World" program, I am getting close to wrapping up my Bachelor of 
+          Science in Computer Science Engineering at Michigan State University and am looking forward to transitioning my 
+          classroom knowledge into real-world experience through an internship opportunity. 
+          <br><br>
+          
+          I have done all of my software design and algorithm courses (not to mention physics and math) and am now focusing 
+          on my final courses at university. I am fluent with several coding languages (ARM Assembly, C, C++, Python, SQL, 
+          HTML, CSS, JavaScript, Java), have used a few libraries (Pandas, Numpy, Matplotlib, wxWidgets), as well as my fair 
+          share of developer tools (Docker, GCloud, GitHub, VSCode, Virtual Studio, IntelliJ, CLion, Spyder, CMake, Visual Paradigm). 
+          <br><br>
+          
+          I am more than ready and eager to be a part of somebody&#39;s team, and contribute in every way I can, while actively building 
+          a strong foundation for future technical experience.
+        </p>
+    </div>
+  </div>
+  <!-- Another block of content -->
+  <hr>
+  <p id="fun-fact">A fun fact about me: <span id="fun-fact-text">{{fun_fact}}</span></p>
+{% endblock %}
+
+

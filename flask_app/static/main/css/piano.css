@@ -1,0 +1,97 @@
+/* Piano Container */
+#piano-content{
+    width: calc(1em + 45vw);
+    height: calc(1em + 60vh);
+    background-color: #2f2f41;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-width: .25em;
+    border-color: #1f1c1c;
+    border-style: solid;
+    color: #fff;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+#piano-text{
+    width: 100%;
+    text-align: center;
+    margin-top: calc(1em + 1.5vh);
+    font-family: Trattatello, fantasy;
+    font-size: calc(1em + 1.65vw);
+}
+
+/*** KEYS ***/
+#keys{
+    width: calc(1em + 40vw);
+    height: calc(1em + 50vh);
+    display: flex;
+    margin: auto;
+    padding: 0;
+}
+#keys .w-key{ /* White Keys */
+    width: calc(1em + 3.5vw);
+    height: calc(1em + 37vh);
+    background-color: #fff;
+    border-radius: 1em;
+    border-width: .4em;
+    border-color: #1f1c1c;
+    border-style: solid;
+
+    display: inline-block;
+    position: relative;
+    z-index: 1; /* bottom */
+}
+#keys .w-key .k-text{
+    color: #000000;
+    font-size: calc(1em + 1.75vw);
+    text-align: center;
+    margin-top: calc(1em + 27vh);
+}
+#keys .b-key{ /* Black Keys */
+    width: calc(1em + 1.5vw);
+    height: calc(1em + 25vh);
+    background-color: #1f1c1c;
+    border-radius: 1em;
+    border-width: .4em;
+    border-color: #000000;
+    border-style: solid;
+
+    display: inline-block;
+    position: absolute;
+    z-index: 2; /* top */
+}
+#keys .b-key .k-text{
+    font-size: calc(1em + .75vw);
+    text-align: center;
+    margin-top: calc(1em + 17.75vh);
+}
+
+/* Set margin for all black keys explicitly */
+#key-W{
+    margin-left: calc(1em + 1.625vw);
+}
+#key-E{
+    margin-left: calc(1em + 5.725vw);
+}
+#key-T{
+    margin-left: calc(1em + 13.9vw);
+}
+#key-Y{
+    margin-left: calc(1em + 17.975vw);
+}
+#key-U{
+    margin-left: calc(1em + 22.05vw);
+}
+#key-O{
+    margin-left: calc(1em + 30.25vw);
+}
+#key-P{
+    margin-left: calc(1em + 34.35vw);
+}
+
+/* Invisible Key Names*/
+#keys .k-text{
+    display: none;
+}

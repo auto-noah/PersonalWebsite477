@@ -1,0 +1,24 @@
+.banner{
+    /* format banner container */
+    width: calc(1em + 100%);
+    height: calc(1em + 10vh);
+
+    /* format banner img */
+    background-image: url(/static/main/images/banner.png);
+    background-size: cover;
+    background-position: center;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    background : #fff;
+}
+
+#welcome-text{
+    font-weight: bold;
+}
+#user-text{
+    font-size: smaller;
+}

@@ -1,0 +1,47 @@
+/* Login Page */
+#login-text{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+#login-text h1{
+    margin-top: 7.5%;
+    margin-bottom: 0;
+    font-size: calc(1em + 2.25vh);
+}
+#login-text p{
+    margin-top: .5%;
+    margin-bottom: .5%;
+}
+#login-text hr{
+    width: 50%;
+}
+
+/* Login Form */
+#login-form{
+    width: 50%;
+    margin: auto;
+}
+#li-submit{
+    width: calc(1em + 80%);
+    padding: 1.5em 0;
+    margin: 1em auto;
+    background-color: #124715;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+}
+#li-submit:hover{ /* Change color of submit button on hover */
+    background-color: #295a2b;
+    transition: 0.3s ease-in-out;
+}
+
+/* Login Failiure Text */
+#auth-fail-text{
+    text-align: center;
+    font-size: larger;
+    color: #cd1313;
+
+    /* INITIALLY HIDDEN */
+    visibility: hidden;
+}

@@ -1,0 +1,40 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+    <div id="proj-page-text">
+        <h1>Below is a list of projects I worked on in CSE 477</h1>
+        <p>Click an image, or hyperlink in the description, to learn more.</p>
+        <hr>
+    </div>
+    <div id="project-content">
+        <div id="project-img"></div>
+        <div id="project-description">
+            <h1>JavaScript Piano</h1>
+            <p>
+                As a part of my first CSE 477 homework assignment, I developed an interactive
+                piano build in pure HTML, CSS, and JavaScript. <br><br>
+                
+                This tool (in addition to my webpage) highlight my ability to build 
+                beautiful and mobile friendly front end applications.
+                <a href="/piano"> Click here to see, and play</a>!
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div id="project-content">
+        <div id="project-img2"></div>
+        <div id="project-description">
+            <h1>Wordle Clone</h1>
+            <p>
+                As a part of my CSE 477 final assignment, I developed a clone of the popular
+                daily word guessing game, Wordle. <br><br>
+
+                Although, my implementation is a bit different from the regular game.
+                Instead of the 5 columns and 6 rows you know and love, my implementation 
+                has a &apos;nxn&apos; sized board, where n is the length of the word you&apos;re guessing. <br>
+                <a href="https://final-exam-yoqpwdjonq-uc.a.run.app/home"> Click here to see, and play</a>!
+            </p>
+        </div>
+    </div>
+    <hr>
+{% endblock %}

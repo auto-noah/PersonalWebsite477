@@ -1,0 +1,29 @@
+{% extends 'shared/layout.html' %}
+
+{% block extracss %}{% endblock %}
+
+{% block extrajs %}
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script src="https://cdn.socket.io/3.1.1/socket.io.min.js"></script>
+{% endblock %}
+
+
+{% block maincontent %}
+    <p id="chat-label">Please chat, it's on me:</p>
+
+    <!-- Chat Box -->
+    <div id='chat' contenteditable></div>
+
+    <div id="under-chat">
+        <!-- Message Box -->
+        <p id="chat-message" class="email">
+            <input id="chat-message-box" class="fbf-textbox" placeholder="Enter your message here..." title="Message box for user input"/>
+        </p>
+    
+        <!-- Leave Chat Button -->
+        <input type="checkbox" id="leave-chat" title="Button to let user leave chat room.">
+        <label id="leave-chat-lbl" for="leave-chat">
+            <div id="leave-chat-btn"><p>Leave Chat</p></div>
+        </label>
+    </div>
+{% endblock %}

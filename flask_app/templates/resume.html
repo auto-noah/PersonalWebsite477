@@ -1,0 +1,80 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+
+  <div id="resume-content">
+    <!-- For each institution - generate a row --> 
+    {% for inst_id, inst in resume_data.items() %}
+      <br>
+      <hr> <!-- hr before every institution -->
+
+      <!-- Display institution data -->
+      <div class="institution-data">
+        <div class="left-col">
+          <h1 id="inst-name">{{ inst['name']       }}</h1>
+        </div>
+        <div class="right-col">
+          <p  id="inst-dept">{{ inst['department'] }}<br>{{ inst['address'] }}<br>{{ inst['city'] }}, {{ inst['state'] }}<br>{{ inst['zip'] }}</p>
+        </div>
+      </div>
+        <!-- Check for positions and iterate through -->
+        {% if inst['positions'] != {} %}
+          {% for pos_id, pos in inst['positions'].items() %}
+
+            <!-- Display position data -->
+            <div class="position-data">
+              <div class="left-col">
+                <h2 id="pos-title">{{ pos['title']                              }}</h2>
+                <p  id="pos-resp" >{{ pos['responsibilities']                   }}</p>
+              </div>
+              <div class="right-col">
+                <p  id="pos-sd-ed">{{ pos['start_date'] }} - {{ pos['end_date'] }}</p>
+              </div>
+            </div>
+
+            <!-- Check for experiences and iterate through -->
+            {% if pos['experiences'] != {} %}
+              {% for exp_id, exp in pos['experiences'].items() %}
+
+                <!-- Display experience data -->
+                <div class="experience-data">
+                  <div class="left-col">
+                    {% if exp['hyperlink'] != 'NULL' %}
+                      <a id="exp-link" href="{{ exp['hyperlink'] }}">
+                        <h3 id="exp-name"> {{ exp['name']        }}</h3>
+                      </a>
+                    {% else %}
+                      {% if exp['name'] != 'NULL' %}
+                        <h3 id="exp-name"> {{ exp['name']        }}</h3>
+                      {% endif %}
+                    {% endif %}
+                    <p>&emsp;&emsp;&#8226; {{ exp['description'] }}</p>
+                  </div>
+                  <div class="right-col">
+                    <p id="exp-sd-ed" >    {{ exp['start_date']  }} - {{ exp['end_date'] }}</p>
+                  </div>
+                </div>
+
+                <!-- Check for skills and iterate through -->
+                {% if exp['skills'] != {} %}
+                  {% for skill_id, skill in exp['skills'].items() %}
+                  
+                    <!-- Display skill data -->
+                    <div class="skill-content">
+                      <div class="left-col">
+                        <h4 id="skill-name-lvl">&emsp;{{ skill['name'] }} : {{ skill['skill_level'] }}</h4>
+                      </div>
+                    </div>  
+
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+    {% endfor %}
+    <hr>
+  </div>
+{% endblock %}
+
+

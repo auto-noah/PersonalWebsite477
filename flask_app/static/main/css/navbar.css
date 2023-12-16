@@ -1,0 +1,108 @@
+nav{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: #124715;
+    height: calc(1em + 7.5vh);
+}
+#homework-welcome-text{
+    margin-top: calc(.5em + 1.1vh);
+}
+nav p{
+    font-size: calc(1em + .5vw);
+    margin: calc(1em + .05vw) calc(1em + .5vw);
+}
+#nav-links{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+#nav-links li{
+    list-style: none;
+}
+.nav-link{
+    text-decoration: none;
+    font-size: calc(1em + .5vw);
+    color: #fff;
+    padding: calc(1em + .05vw) calc(1em + .1vw);
+    display: block;
+}
+.nav-link:hover{ /* Handles turning nav bar links opaque while hovering */
+    opacity: 70%;
+    transition: 0.3s;
+}
+
+/* Handle LinkedIn/Responsive Stuff */
+#linkedin-text{ 
+    color: transparent; /* Toggle off LinkedIn text */
+}
+#linkedin-img{ 
+    /* Set the LinkedIn img size & pos */
+    min-width: 3.5vw;
+    height: 6vh;
+    position: absolute; 
+    top: 13.2vh;
+    right: calc(1em + 3.5vh);
+}
+
+/* Responsive Navbar Stuff */
+#menu-toggle{
+    display: none;
+}
+label img{
+    display: none;
+}
+#menu-toggle:checked ~ #nav-links{
+    display: flex; 
+    background-color: #124715;
+    z-index: 100;
+}
+
+
+/* Responsive Section */
+@media screen and (max-width: 650px){
+    #homework-welcome-text{
+        margin-top: calc(.5em + .7vh);
+        height: 4em;
+    }
+    label img{
+        display: flex;
+
+        /* Set size & pos of img */
+        width: calc(1em + 2vw);
+        height: calc(1em + 2vw);
+        position: absolute; 
+        top: calc(1em + 13.25vh);
+        right: calc(1em + 1.5vh);
+    }
+    nav{
+        flex-direction: column; /* Align nav's p tag and ul vertically */
+        align-items: flex-start;
+        width: 100%;
+    }
+    #nav-links{
+        flex-direction: column; /* Align ul contents vertically */
+        width: 100%;
+
+        display: none;
+    }
+    #nav-links li{
+        text-align: center;
+    }
+    #nav-links li:hover{
+        background-color: #295a2b;
+        transition: 0.15s;
+    }
+    .nav-link{
+        padding: calc(.5em + 1vh);
+    }
+
+    /* Handle LinkedIn Stuff */
+    #linkedin-text{
+        color: #fff; /* Toggle on the LinkedIn text */
+    }
+    #linkedin-img{
+        display: none; /* Toggle off the LinkedIn img */
+    }
+}

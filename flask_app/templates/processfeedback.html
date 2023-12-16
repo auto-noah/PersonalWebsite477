@@ -1,0 +1,11 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+
+    <h1 id="feedback-page-text">Thank you for your feedback - here's what others had to say:</h1><hr><br>
+    
+    {% for reply in feedback_query[::-1] %}
+        <p class="fb-reply">&emsp;&#8226; <span id="fb-reply-name">{{ reply['name'] }}</span> said: {{ reply['comment'] }}</p>
+    {% endfor %}
+
+{% endblock %}
