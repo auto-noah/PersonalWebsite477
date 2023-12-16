@@ -16,6 +16,6 @@ The purpose of producing this web application is to provide hands-on experience 
 4. Python Flask - a backend for your web application.
 5. MySQL - a relational database to store and retrieve data for your application.
 6. Jinja - a tools for generating dynamic HTML content.
-7. Session management,
-8. Password encryption and user authentication and,
+7. Session management.
+8. Password encryption and user authentication.
 9. Asynchronous communication technologies.
