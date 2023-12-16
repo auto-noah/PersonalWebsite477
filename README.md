@@ -4,7 +4,7 @@ https://final-exam2-yoqpwdjonq-uc.a.run.app/home
 
 This is a personal portfolio/resume web application that I produced during my CSE 477 Web Development course.
 
-The website is built with HTML, CSS, & JS and utilizes Flask, mySQL, and Jinja to route/store/display backend data to the user. There is an online chat function that utilizes sockets to let users interact asyncronously. There is also a projects page with a fully integrated piano application (developed in pure HTML CSS and JS), and a link to a clone I made of the beloved game wordle as the final exam for the course.
+The website is built with HTML, CSS, & JS and utilizes Flask, mySQL, and Jinja to route/store/display backend data to the user. There is an online chat function that utilizes sockets to let users interact asyncronously. There is also a projects page with a fully integrated piano application (developed in pure HTML CSS and JS), and a link to a clone of the beloved game wordle that I made during the course as well.
 
 ## Purpose:
 
