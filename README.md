@@ -1,5 +1,7 @@
 # [Personal Portfolio Web Application](https://final-exam2-yoqpwdjonq-uc.a.run.app/home)
 
+https://final-exam2-yoqpwdjonq-uc.a.run.app/home
+
 This is a personal portfolio/resume web application that I produced during my CSE 477 Web Development course.
 
 The website is built with HTML, CSS, & JS and utilizes Flask, mySQL, and Jinja to route/store/display backend data to the user. There is an online chat function that utilizes sockets to let users interact asyncronously. There is also a projects page with a fully integrated piano application, and a link to a wordle clone application that I produced during the course as well.
